@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4DEA47F89F2617CCAD5A1AF9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4DEA47F89F2617CCAD5A1AF9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ESwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,9 +43,9 @@
 		698636C41B7D8B57E0D9651C /* Pods_ESwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD5AB2D5CA3AFF59EF61911 /* Pods_ESwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939E462FD60C22B23A9CBDE5 /* Pods-ESwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESwift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ESwift_Tests/Pods-ESwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B04E54BFF421413D9D91BAFF /* ESwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ESwift.podspec; path = ../ESwift.podspec; sourceTree = "<group>"; };
+		B04E54BFF421413D9D91BAFF /* ESwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ESwift.podspec; path = ../ESwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B594B0C4CA9DB32EE5CAE5F6 /* Pods-ESwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESwift_Example.release.xcconfig"; path = "Target Support Files/Pods-ESwift_Example/Pods-ESwift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BDBE25C9A74CA8B6FD956EAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BDBE25C9A74CA8B6FD956EAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FE9324BF9CFC295F1C1F514C /* Pods-ESwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESwift_Example.debug.xcconfig"; path = "Target Support Files/Pods-ESwift_Example/Pods-ESwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				939E462FD60C22B23A9CBDE5 /* Pods-ESwift_Tests.debug.xcconfig */,
 				695F16CAA6B8BFC559F54F72 /* Pods-ESwift_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -292,10 +292,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ESwift_Example/Pods-ESwift_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ESwift/ESwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GameTools/GameTools.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GameTools.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

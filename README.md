@@ -22,7 +22,7 @@ pod 'ESwift'
 
 ## Author
 
-TerroKot, egor.tereshonok@gmail.com
+Egor Tereshonok, egor.tereshonok@gmail.com
 
 ## License
 
