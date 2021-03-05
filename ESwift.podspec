@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Egor Tereshonok' => 'egor.tereshonok@gmail.com' }
   s.source           = { :git => 'https://github.com/TerroKot/ESwift.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
-
+  s.swift_version    = "5.4"
   s.source_files     = 'Source/**/*.swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.dependency 'GameTools'
