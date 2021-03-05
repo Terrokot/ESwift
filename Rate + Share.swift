@@ -34,3 +34,4 @@ public func rateApp(appId: String?) {
         UIApplication.shared.openURL(url)
     }
 }
+
