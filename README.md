@@ -1,6 +1,6 @@
 # ESwift
 
-[![CI Status](https://img.shields.io/travis/TerroKot/ESwift.svg?style=flat)](https://travis-ci.org/TerroKot/ESwift)
+[![CocoaPods](https://img.shields.io/badge/swift-5.4-brightgreen.svg)](https://swift.org)
 [![Version](https://img.shields.io/cocoapods/v/ESwift.svg?style=flat)](https://cocoapods.org/pods/ESwift)
 [![License](https://img.shields.io/cocoapods/l/ESwift.svg?style=flat)](https://cocoapods.org/pods/ESwift)
 [![Platform](https://img.shields.io/cocoapods/p/ESwift.svg?style=flat)](https://cocoapods.org/pods/ESwift)
