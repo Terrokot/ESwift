@@ -11,9 +11,26 @@ import ESwift
 
 class ViewController: UIViewController {
     
+    @Default  (key: "kok")                    var neOpt: Bool
+    @Default                                  var opt: Bool?
+
+    @Default (key: "opt", defaultValue: true) var neOptTrue
+    @Default (key: "opt", defaultValue: true) var optTrue: Bool?
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(neOpt)
+        print(opt)
+
+        print(neOptTrue)
+        print(optTrue)
+
+
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -5,38 +5,34 @@
 import Foundation
  
 @propertyWrapper
-public struct Default<T: Codable> {
+public struct Default<T: Codable & DefaultInitializable> {
     private let key: String
-    private let defaultValue: T!
+    private var defaultValue: T? = nil
 
     public init(key: String, defaultValue: T) {
         self.key = key
         self.defaultValue = defaultValue
     }
+    
     public init(key: String) {
         self.key = key
-        self.defaultValue = nil
     }
     public init(_ key: String = #file + String(#line)) {
         self.key = key
-        self.defaultValue = nil
     }
-    public init(defaultValue: T, _ key: String = #file + String(#line)) {
-        self.key = key
-        self.defaultValue = defaultValue
-    }
-
+    
     public var wrappedValue: T {
         get {
+            
             // Read value from UserDefaults
             guard let data = UserDefaults.standard.object(forKey: key) as? Data else {
-                // Return defaultValue when no data in UserDefaults
-                return defaultValue
+                guard  let def = defaultValue  else { return T.defaultValue }
+                return def
             }
 
             // Convert data to the desire data type
             let value = try? JSONDecoder().decode(T.self, from: data)
-            return value ?? defaultValue
+            return value ?? T.defaultValue
         }
         set {
             // Convert newValue to data
@@ -47,4 +43,34 @@ public struct Default<T: Codable> {
         }
     }
 }
+
+public protocol DefaultInitializable {
+    static var defaultValue: Self { get }
+
+}
+extension Bool: DefaultInitializable {
+    public static var defaultValue: Bool { Bool() }
+}
+
+extension String: DefaultInitializable {
+    public static var defaultValue: String { String() }
+}
+
+extension Double: DefaultInitializable {
+    public static var defaultValue: Double { Double() }
+}
+
+extension Int: DefaultInitializable {
+    public static var defaultValue: Int { Int() }
+}
+
+extension Dictionary: DefaultInitializable {
+    public static var defaultValue: Dictionary { Dictionary() }
+}
+
+
+extension Optional: DefaultInitializable {
+    public static var defaultValue: Optional<Wrapped> { nil }
+}
+
 
