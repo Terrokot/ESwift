@@ -68,6 +68,9 @@ extension Dictionary: DefaultInitializable {
     public static var defaultValue: Dictionary { Dictionary() }
 }
 
+extension Array: DefaultInitializable {
+    public static var defaultValue: Array<Element> { Array() }
+}
 
 extension Optional: DefaultInitializable {
     public static var defaultValue: Optional<Wrapped> { nil }
