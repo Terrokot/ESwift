@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ESwift'
-  s.version          = '0.1.1'
+  s.version          = '0.1.3'
   s.summary          = 'Best iOS practics'
   s.homepage         = 'https://github.com/TerroKot/ESwift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
